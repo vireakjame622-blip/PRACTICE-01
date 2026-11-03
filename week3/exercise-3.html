@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 3 - CSS Flexbox</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 1rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .container {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        header {
+            background-color: #1e90ff;
+            box-shadow: 0 4px 6px #0077ea;
+            border-radius: 0.5rem;
+            padding: 1.2rem 1rem;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+            flex-grow: 1;
+        }
+
+        main {
+            background-color: #3cb371;
+            box-shadow: 0 4px 6px #2f8d59;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-content: flex-start;
+        }
+
+        .item {
+            width: 80px;
+            height: 80px;
+            background-color: #2f8d59;
+            box-shadow: 0 4px 6px #226741;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .sidebar {
+            background-color: #ff6347;
+            box-shadow: 0 4px 6px #e02200;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            width: 10rem;
+            flex-shrink: 0;
+        }
+
+        footer {
+            background-color: #4169e1;
+            box-shadow: 0 4px 6px #1d44b8;
+            border-radius: 0.5rem;
+            padding: 1.2rem 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>header</header>
+        <div class="content">
+            <main>
+                <div>main</div>
+                <div class="items">
+                    <div class="item">item</div>
+                    <div class="item">item</div>
+                    <div class="item">item</div>
+                    <div class="item">item</div>
+                    <div class="item">item</div>
+                    <div class="item">item</div>
+                    <div class="item">item</div>
+                    <div class="item">item</div>
+                    <div class="item">item</div>
+                    <div class="item">item</div>
+                    <div class="item">item</div>
+                </div>
+            </main>
+            <aside class="sidebar">sidebar</aside>
+        </div>
+        <footer>footer</footer>
+    </div>
+</body>
+</html>
